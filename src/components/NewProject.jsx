@@ -1,13 +1,13 @@
 import Input from "./Input";
 
-function NewProject({projectData}){
+function NewProject({projectData, onChangeHandler}){
     return(
         <div className="w-[35rem] mt-10">
            
             <div>
-                <Input label='Name' value={projectData.name}/>
-                <Input label='Description' isTextBox value={projectData.description}/>
-                <Input label='Due Date' value={projectData.dueDate}/>
+                <Input label='Name' id='name' value={projectData.name} onChangeHandler={onChangeHandler}/>
+                <Input label='Description' id='description' isTextBox value={projectData.description} onChangeHandler={onChangeHandler}/>
+                <Input label='Due Date' id='dueDate' value={projectData.dueDate} onChangeHandler={onChangeHandler}/>
             </div>
              <menu className="flex items-center justify-end gap-4 my-4">
                 <button className="text-stone-800 hover:text-stone-950">Cancel</button>
